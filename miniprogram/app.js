@@ -1,20 +1,44 @@
-//app.js
-App({
-  onLaunch: function () {
-    
-    if (!wx.cloud) {
-      console.error('请使用 2.2.3 或以上的基础库以使用云能力')
-    } else {
-      wx.cloud.init({
-        // env 参数说明：
-        //   env 参数决定接下来小程序发起的云开发调用（wx.cloud.xxx）会默认请求到哪个云环境的资源
-        //   此处请填入环境 ID, 环境 ID 可打开云控制台查看
-        //   如不填则使用默认环境（第一个创建的环境）
-        // env: 'my-env-id',
-        traceUser: true,
-      })
-    }
+import WxValidate from './assets/plugins/wx-validate/WxValidate'
+import WxService from './assets/plugins/wx-service/WxService'
+import HttpResource from './helpers/HttpResource'
+import HttpService from './helpers/HttpService'
+import __config from './etc/config'
 
-    this.globalData = {}
-  }
+App({
+	onLaunch() {
+		console.log('onLaunch')
+	},
+	onShow() {
+		console.log('onShow')
+	},
+	onHide() {
+		console.log('onHide')
+	},
+	getUserInfo() {
+		return this.WxService.login()
+		.then(data => {
+            console.log(data)
+			return this.WxService.getUserInfo()
+		})
+		.then(data => {
+            console.log(data)
+			this.globalData.userInfo = data.userInfo
+			return this.globalData.userInfo
+		})
+	},
+	globalData: {
+		userInfo: null
+	},
+	renderImage(path) {
+        if (!path) return ''
+        if (path.indexOf('http') !== -1) return path
+        return `${this.__config.domain}${path}`
+    },
+	WxValidate: (rules, messages) => new WxValidate(rules, messages), 
+	HttpResource: (url, paramDefaults, actions, options) => new HttpResource(url, paramDefaults, actions, options).init(), 
+	HttpService: new HttpService({
+		baseURL: __config.basePath,
+	}), 
+	WxService: new WxService, 
+	__config, 
 })

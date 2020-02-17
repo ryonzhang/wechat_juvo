@@ -1,0 +1,11 @@
+<!--pages/balance/index.wxml-->
+<view>
+<view>
+  <text class='core-balance'>Core Balance</text>
+  <text class='core-balance-num'>34</text>
+  </view>
+  <view>
+  <text class='due-balance'>Due Balance</text>
+  <text class='due-balance-num'>27</text>
+  </view>
+</view>

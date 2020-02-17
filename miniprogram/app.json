@@ -1,26 +1,53 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
-    "pages/openapi/openapi",
-    "pages/openapi/serverapi/serverapi",
-    "pages/openapi/callback/callback",
-    "pages/openapi/cloudid/cloudid",
-    "pages/im/im",
-    "pages/im/room/room"
+    "pages/classify/index",
+    "pages/cart/index",
+    "pages/address/list/index",
+    "pages/address/add/index",
+    "pages/address/edit/index",
+    "pages/address/confirm/index",
+    "pages/order/list/index",
+    "pages/order/confirm/index",
+    "pages/order/detail/index",
+    "pages/goods/list/index",
+    "pages/goods/detail/index",
+    "pages/help/list/index",
+    "pages/help/detail/index",
+    "pages/search/index",
+    "pages/about/index",
+    "pages/login/index",
+    "pages/user/index",
+    "pages/balance/index"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#479de6",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "小商城",
+    "backgroundColor": "#f8f8f8",
+    "backgroundTextStyle": "dark"
   },
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#479de6",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "assets/images/iconfont-home.png",
+      "selectedIconPath": "assets/images/iconfont-home-active.png",
+      "text": "Home"
+    }, {
+      "pagePath": "pages/cart/index",
+      "iconPath": "assets/images/iconfont-cart.png",
+      "selectedIconPath": "assets/images/iconfont-cart-active.png",
+      "text": "Cart"
+    }, {
+      "pagePath": "pages/user/index",
+      "iconPath": "assets/images/iconfont-user.png",
+      "selectedIconPath": "assets/images/iconfont-user-active.png",
+      "text": "My Info"
+    }]
+  },
+  "debug": false
 }
