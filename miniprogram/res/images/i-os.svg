@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="360" height="90" viewBox="0 0 360 90">
+    <defs>
+        <filter id="prefix__a" width="102.3%" height="109.2%" x="-1.2%" y="-2.3%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+        </filter>
+        <path id="prefix__b" d="M350.202 0c1.17 0 2.118.948 2.118 2.118v75.396c0 1.17-.948 2.117-2.118 2.117H68.951l-7.045 7.34-7.046-7.34H9.798c-1.17 0-2.118-.948-2.118-2.117V2.118C7.68.948 8.628 0 9.798 0h340.404z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <use fill="#000" filter="url(#prefix__a)" xlink:href="#prefix__b"/>
+        <use fill="#FAFAFA" xlink:href="#prefix__b"/>
+        <text fill="#282E34" font-family="SFProText-Bold, SF Pro Text" font-size="16" font-weight="bold" letter-spacing="-.3">
+            <tspan x="23.04" y="29">Top up instantly with credit</tspan>
+        </text>
+        <text fill="#282E34" font-family="SFProText-Regular, SF Pro Text" font-size="13">
+            <tspan x="23.04" y="49">Top up now and earn points when you pay back at </tspan> <tspan x="23.04" y="67">an OpCo location on time.</tspan>
+        </text>
+    </g>
+</svg>

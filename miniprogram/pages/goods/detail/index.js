@@ -28,7 +28,7 @@ Page({
   },
   onShareAppMessage: function (res) {
     return {
-      title: '自定义，一般写小程序的名字',
+      title: this.goods.item.name,
       success: function (shareTickets) {
         console.info(shareTickets + '成功');
         // 转发成功

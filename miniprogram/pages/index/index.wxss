@@ -1,33 +1,209 @@
-.scroll-list {
-    overflow: hidden;
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
 }
-
-.weui-icon-search, 
-.weui-search-bar__text {
-    vertical-align: inherit;
+.topup{
+  height:90px;
+  width:100%;
 }
+.info_bar,.list-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
-.topbar {
-    background: #fff;
 }
-
-.topbar-item {
-    color: #333;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 35rpx;
+.main_balance,.total_due{
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  align-items: flex-start;
 }
+.main_balance_text,.total_due_text {
+  width: 114px;
+  height: 22px;
+  font-family: SFProText;
+  font-size: 17px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #208389;
+  position: relative;
 
-.topbar-item.active {
-    color: #479de6;
 }
-
-.swiper_box {
-    width: 100%;
+.dollar{
+  position: relative;
+  width: 11px;
+  height: 11px;
+  font-family: SFProText;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.31;
+  letter-spacing: normal;
+  color: #282e34;
+  top:-10px;
 }
-
-swiper-item image {
-    width: 100%;
-    display: inline-block;
-    overflow: hidden;
+.main_balance_number,.total_due_number{
+  width: 86px;
+  height: 41px;
+  font-family: SFProText;
+  font-size: 34px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  color: #282e34;
+  margin-left:10px;
+}
+.loyalty{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.loyalty-wrapper{
+  height:260px;
+  position: relative;
+  top:-20px;
+}
+.progress-bar{
+  width: 254px;
+  height: 254px;
+}
+.oval{
+  width: 254px;
+  height: 254px;
+  position:relative;
+  top:-254px;
+  opacity: 0;
+}
+.level-gold{
+  width: 120px;
+  height: 114px;
+  object-fit: contain;
+  position:relative;
+  top:-424px;
+  opacity: 0;
+}
+.level-diamond{
+  width: 19px;
+  height: 18px;
+  object-fit: contain;
+  position:relative;
+  top:-467px;
+  left:70px;
+  opacity: 0;
+}
+.level-text{
+  width: 47px;
+  height: 22px;
+  font-family: SFProText;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: center;
+  color: #f68c02;
+  position:relative;
+  top:-574px;
+  opacity: 0;
+}
+.loyalty-points{
+  width: 63px;
+  height: 40px;
+  font-family: SFProText;
+  font-size: 34px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.18;
+  letter-spacing: normal;
+  text-align: center;
+  color: #f68c02;
+  position:relative;
+  top:-449px;
+  opacity: 0;
+}
+.next-level-points{
+  width: 116px;
+  height: 16px;
+  font-family: SFProText;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: right;
+  color: #797676;
+  position:relative;
+  top:-449px;
+  left:-7px;
+}
+.data,.voice,.sms{
+  width: 375px;
+  height: 34px;
+  object-fit: contain;
+}
+.list-item{
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:10px;
+  padding-bottom:10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(128, 128, 128, 0.1);
+  border-bottom-style: solid; 
+}
+.item-main{
+  display: flex;
+  flex-direction: column;
+  width:100px;
+}
+.item-main-sub{
+  width: 247px;
+  height: 18px;
+  font-family: SFProText;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: #797676;
+}
+.item-main-data{
+  width: 247px;
+  height: 22px;
+  font-family: SFProText;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: -0.4px;
+  color: #282e34;
+}
+.item-time,.item-time-text{
+  width: 178px;
+  height: 22px;
+  font-family: SFProText;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: -0.4px;
+  text-align: right;
+  color: #282e34;
 }

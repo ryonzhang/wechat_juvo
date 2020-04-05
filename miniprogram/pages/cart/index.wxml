@@ -1,41 +1,92 @@
-<import src="../common/prompt.wxml"/>
-
-<template is="prompt" data="{{ prompt }}"/>
-
-<view class="weui-panel weui-panel_access" wx:if="{{ !!carts.items.length }}" wx:for="{{ carts.items }}" wx:key="">
-    <view class="weui-panel__hd">
-        <text class="info-meta" wx:if="{{ !canEdit }}" data-value="edit" bindtap="onTapEdit">Edit</text>
-        <text class="info-meta" wx:if="{{ canEdit }}" bindtap="onTapEdit">Complete</text>
-        <text class="info-meta" bindtap="del" data-id="{{ item._id }}">Delete</text>
+<view class='package'>
+  <image class='title' src="../../res/images/top-up-now.svg" />
+  <block wx:for="{{ amounts }}">
+    <view class='list-item' bindtap='topup' wx:if='{{item<qualifiedAmount}}' data-amount='{{item}}'>
+      <view class='top-up-items'>
+        <image class='snap' src="../../res/images/top-up.svg" />
+        <view class='item-main'>
+          <text class='item-main-data'>${{item}} top-up</text>
+          <text class='item-main-sub'>Pay back before {{expiration}}</text>
+        </view>
+      </view>
+      <text class='item-time-text'>${{item}}.00</text>
     </view>
-    <view class="weui-panel__bd">
-        <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg" bindtap="navigateTo" data-id="{{ item.goods._id }}">
-                <image class="weui-media-box__thumb" src="{{ item.goods.thumb_url }}" />
-            </view>
-            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                <view class="weui-media-box__title">{{ item.goods.name }}</view>
-                <view class="weui-media-box__desc">
-                    <text class="text-orangered">$ {{ item.goods.price }}</text>
-                </view>
-                <view class="weui-media-box__info">
-                    <view class="weui-media-box__info__meta">Number x{{ item.total }}</view>
-                    <view class="weui-media-box__info__meta">Price x{{ item.amount }}</view>
-                    <view class="weui-media-box__info__meta">Total x{{ item.totalAmount }}</view>
-                </view>
-                <view class="quantity-wrapper" wx:if="{{ canEdit }}">
-                    <view class="customize-qua">
-                        <view class="quantity-decrease" bindtap="decrease" data-id="{{ item._id }}" data-total="{{ item.total }}"></view>
-                        <input class="quantity" type="number" data-id="{{ item._id }}" value="{{ item.total }}" bindinput="bindKeyInput" />
-                        <view class="quantity-increase" bindtap="increase" data-id="{{ item._id }}" data-total="{{ item.total }}"></view>
-                    </view>
-                </view>
-            </view>
-        </navigator>
+    <view class='list-item' bindtap='earnMore' wx:else data-amount='{{item}}'>
+      <view class='top-up-items'>
+        <image class='snap' src="../../res/images/lock.svg" />
+        <view class='item-main'>
+          <text class='item-main-data'>${{item}} top-up</text>
+          <text class='item-main-sub'>Earn more points to unlock</text>
+        </view>
+      </view>
+      <text class='item-time-text'>${{item}}.00</text>
     </view>
+  </block>
+  <image class='title' src="../../res/images/request-top-up.svg" />
+  <view class='list-item'>
+    <view class='item-main'>
+      <text class='item-main-data-friend'>Request a top-up from friends and family</text>
+    </view>
+    <text class='item-time-text'>Request</text>
+  </view>
 </view>
 
-<view class="button-sp-area" wx:if="{{ !!carts.items.length }}">
-    <button class="weui-btn" type="primary" bindtap="confirmOrder">Check out</button>
-    <button class="weui-btn" type="warn" bindtap="clear">Empty cart</button>
+
+<image class='title' src="../../res/images/top-up-by-card.svg" />
+<view class='list-item'>
+  <view class='item-main'>
+    <text class='item-main-data'>Top up by credit/debit card</text>
+  </view>
+  <text class='item-time-text'>Go</text>
+</view>
+
+<view class="overlay" wx-if='{{topupPopup}}'>
+  <view class='overlay-content'>
+    <view class='checkout'>
+      <text class='checkout-font'>Checkout</text>
+      <image class='close' src="../../res/images/close.svg" bindtap="closeTopup" />
+    </view>
+    <view class='list-item'>
+      <view class='popup-top-up-items'>
+        <image class='snap' src="../../res/images/top-up.svg" />
+        <text class='item-main-data'>${{selectedAmount}} Top Up</text>
+      </view>
+    </view>
+    <image class='title' src="../../res/images/details.svg" />
+    <view class='detail-list'>
+      <text class='detail-title'>Top up now and pay later</text>
+      <text class='detail-sub'>Top up now and then pay back at least ${{selectedAmount}} before {{expiration}} to earn {{selectedAmount*10}} points.</text>
+    </view>
+    <image class='title' src="../../res/images/you-will-pay.svg" />
+    <view class='list-item'>
+      <text class='fee'>Subtotal:</text>
+      <text class='amount'>${{selectedAmount}}.00</text>
+    </view>
+    <view class='list-item'>
+      <text class='fee'>Fee:</text>
+      <text class='amount'>$0.00</text>
+    </view>
+    <view class='list-item'>
+      <text class='fee'>Total:</text>
+      <text class='amount'>${{selectedAmount}}.00</text>
+    </view>
+    <view class='btn-container'>
+      <button class='top-up-btn' bindtap="success">Buy Now</button>
+    </view>
+  </view>
+</view>
+
+<view class="overlay-earn-more" wx-if='{{earnMorePopup}}'>
+  <view class='overlay-earn-more-content'>
+    <image class='unlock' src="../../res/images/unlock.svg" />
+    <view class='unlock-text-holder'>
+      <text class='unlock-title'>Earn more points to unlock</text>
+      <text class='unlock-sub'>Earn more points to unlock higher value instant top-ups. </text>
+      <view class='ok-btn'>
+        <view class='div-line'></view>
+        <text class='ok' bindtap='closeEarnMore'>OK</text>
+      </view>
+    </view>
+
+  </view>
 </view>

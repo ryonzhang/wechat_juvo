@@ -10,15 +10,11 @@ Page({
 				path: '/pages/order/list/index'
 			}, 
 			{
-				icon: '../../assets/images/iconfront-amount.png',
-				text: 'Balance',
-				path: '45'
-			}, 
-			{
 				icon: '../../assets/images/iconfont-kefu.png',
 				text: 'Contact us',
 				path: '98144617',
 			}, 
+      
 			{
 				icon: '../../assets/images/iconfont-help.png',
 				text: 'FAQ',
@@ -48,13 +44,6 @@ Page({
 
 		switch(index) {
       case 1:
-        App.WxService.showModal({
-          title: 'Balance',
-          content: 'Your Balance:45\nDue Balance:24',
-        })
-          .then(data => data.confirm == 1)
-        break
-			case 2:
 				App.WxService.makePhoneCall({
 					phoneNumber: path
 				})

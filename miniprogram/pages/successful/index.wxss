@@ -1,0 +1,101 @@
+.background{
+  position: fixed; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0f979a; /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+.top-up-completed {
+  position:fixed;
+  top:100px;
+  left:40px;
+  width: 295px;
+  height: 82px;
+  font-family: SFProText;
+  font-size: 34px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+.top-up-completed-image{
+  position:fixed;
+  width: 228px;
+  height: 280px;
+  left:128px;
+}
+.product-title{
+  top:200px;
+  left:40px;
+  position:fixed;
+  width: 295px;
+  height: 22px;
+  font-family: SFProText;
+  font-size: 17px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+.product-sub{
+  top:228px;
+  left:40px;
+  position:fixed;
+  width: 295px;
+  height: 22px;
+  font-family: SFProText;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+.detail-title{
+  top:270px;
+  left:40px;
+  position:fixed;
+  width: 295px;
+  height: 22px;
+  font-family: SFProText;
+  font-size: 17px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+.detail-sub{
+  top:298px;
+  left:40px;
+  position:fixed;
+  width: 295px;
+  height: 66px;
+  font-family: SFProText;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+.confirm-btn{
+  width: 60px;
+  height: 60px;
+  bottom:40px;
+  right:20px;
+  position:fixed;
+}

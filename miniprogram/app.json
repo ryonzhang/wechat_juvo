@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/successful/index",
     "pages/classify/index",
-    "pages/cart/index",
+    "pages/cart/index", 
     "pages/address/list/index",
     "pages/address/add/index",
     "pages/address/edit/index",
@@ -21,33 +22,38 @@
     "pages/balance/index"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#479de6",
-    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#eee",
+    "navigationBarTextStyle": "black",
     "navigationBarTitleText": "小商城",
     "backgroundColor": "#f8f8f8",
     "backgroundTextStyle": "dark"
   },
   "tabBar": {
     "color": "#999999",
-    "selectedColor": "#479de6",
+    "selectedColor": "#0F979A",
     "borderStyle": "white",
     "backgroundColor": "#fff",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "iconPath": "assets/images/iconfont-home.png",
-      "selectedIconPath": "assets/images/iconfont-home-active.png",
-      "text": "Home"
-    }, {
-      "pagePath": "pages/cart/index",
-      "iconPath": "assets/images/iconfont-cart.png",
-      "selectedIconPath": "assets/images/iconfont-cart-active.png",
-      "text": "Cart"
-    }, {
-      "pagePath": "pages/user/index",
-      "iconPath": "assets/images/iconfont-user.png",
-      "selectedIconPath": "assets/images/iconfont-user-active.png",
-      "text": "My Info"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "res/images/icon-disabled-home.png",
+        "selectedIconPath": "res/images/icon-primary-home.png",
+        "text": "Home"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "iconPath": "res/images/icon-disabled-top-up.png",
+        "selectedIconPath": "res/images/icon-primary-top-up.png",
+        "text": "Top Up"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "iconPath": "res/images/icon-disabled-sms.png",
+        "selectedIconPath": "res/images/icon-primary-sms.png",
+        "text": "My Info"
+      }
+    ]
   },
-  "debug": false
+  "debug": false,
+  "sitemapLocation": "sitemap43.json"
 }

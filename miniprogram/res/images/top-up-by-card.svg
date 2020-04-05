@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="34" viewBox="0 0 375 34">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FAFAFA" d="M0 0L375 0 375 34 0 34z"/>
+        <text fill="#282E34" font-family="SFProText-Bold, SF Pro Text" font-size="12" font-weight="bold">
+            <tspan x="20" y="24">Top-up by card</tspan>
+        </text>
+    </g>
+</svg>
