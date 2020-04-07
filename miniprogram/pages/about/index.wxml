@@ -1,6 +1,6 @@
 <view class="about">
-	<view class="about-item">
-		<text class="about-item-title">Juvo Mobile</text>
-		<text class="about-item-content">Juvo Mobile Inc. provides mobile identity scoring platform. The Company offers a cloud-based proprietary identity stack that combines consumer Internet know-how, data science, and game mechanics to identify unknown mobile users and encourage them to interact with their mobile operators.</text>
-	</view>
+  <view class="about-item">
+    <text class="about-item-title">Juvo Mobile</text>
+    <text class="about-item-content">Juvo Mobile Inc. provides mobile identity scoring platform. The Company offers a cloud-based proprietary identity stack that combines consumer Internet know-how, data science, and game mechanics to identify unknown mobile users and encourage them to interact with their mobile operators.</text>
+  </view>
 </view>

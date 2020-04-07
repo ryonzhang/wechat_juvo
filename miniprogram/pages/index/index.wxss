@@ -8,19 +8,19 @@
   height:90px;
   width:100%;
 }
-.info_bar,.list-item{
+.info-bar,.list-item{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
 }
-.main_balance,.total_due{
+.main-balance,.total-due{
   display: flex;
   flex-direction: column;
   margin-left: 16px;
   align-items: flex-start;
 }
-.main_balance_text,.total_due_text {
+.main-balance-text,.total-due-text {
   width: 114px;
   height: 22px;
   font-family: SFProText;
@@ -48,7 +48,7 @@
   color: #282e34;
   top:-10px;
 }
-.main_balance_number,.total_due_number{
+.main-balance-number,.total-due-number{
   width: 86px;
   height: 41px;
   font-family: SFProText;
@@ -59,7 +59,6 @@
   line-height: 1.21;
   letter-spacing: normal;
   color: #282e34;
-  margin-left:10px;
 }
 .loyalty{
   display: flex;

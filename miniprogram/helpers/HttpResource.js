@@ -12,7 +12,7 @@ class HttpResource {
 	}
 
 	/**
-	 * 返回实例对象
+	 * return resource
 	 */
 	init() {
 		const resource = new WxResource(this.setUrl(this.url), this.paramDefaults, this.actions, this.options)
@@ -21,14 +21,14 @@ class HttpResource {
 	}
 
 	/**
-	 * 设置请求路径
+	 * set request url
 	 */
 	setUrl(url) {
 		return `${__config.basePath}${url}`
 	}
 
 	/**
-	 * 拦截器
+	 * interceptors middleware
 	 */
 	setInterceptors() {
 		return {
@@ -39,7 +39,7 @@ class HttpResource {
                     request.header.Authorization = 'Bearer ' + wx.getStorageSync('token')
                 }
                 wx.showLoading({
-                    title: '加载中', 
+                    title: 'Loading ...', 
                 })
                 return request
             },

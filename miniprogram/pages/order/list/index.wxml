@@ -1,12 +1,13 @@
+<wxs module="utils" src="../../../pipelines/utils.wxs"></wxs>
 <block wx:for="{{ orders }}">
     <view class='list-item' bindtap='topup' data-amount='{{item.amount}}'>
       <view class='top-up-items'>
-        <image class='snap' src="../../../res/images/top-up.svg" />
+        <image class='snap' src="../../../assets/images/top-up.svg" />
         <view class='item-main'>
           <text class='item-main-data'>${{item.amount}} top-up</text>
           <text class='item-main-sub'>Transaction on {{item.date}}</text>
         </view>
       </view>
-      <text class='item-time-text'>${{item.amount}}.00</text>
+      <text class='item-time-text'>${{utils.numberToFix(item.amount)}}</text>
     </view>
   </block>

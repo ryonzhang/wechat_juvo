@@ -1,0 +1,9 @@
+var utils = {
+  numberToFix:function(value){
+    return parseFloat(value).toFixed(2)
+  }
+}
+
+module.exports={
+  numberToFix: utils.numberToFix
+}

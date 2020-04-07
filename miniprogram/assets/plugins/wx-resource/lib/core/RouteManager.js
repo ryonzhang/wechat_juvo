@@ -1,10 +1,9 @@
 import Utils from '../helpers/Utils'
 
 /**
- * 注册路由
  * 
- * @param {String} template url 路径
- * @param {Object} defaults 参数对象
+ * @param {String} template url 
+ * @param {Object} defaults 
  * 
  */
 class RouteManager {

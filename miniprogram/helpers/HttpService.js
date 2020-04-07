@@ -10,12 +10,7 @@ class HttpService extends WxRequest {
 			decryptData : '/user/wechat/decrypt/data',
 			signIn      : '/user/sign/in',
 			signOut     : '/user/sign/out',
-			banner      : '/banner', 
-			classify    : '/classify', 
-			goods       : '/goods', 
-			search      : '/goods/search/all', 
 			cart        : '/cart', 
-			address     : '/address', 
 			order       : '/order', 
         }
         this.interceptors.use({
@@ -26,7 +21,7 @@ class HttpService extends WxRequest {
                     request.header.Authorization = 'Bearer ' + wx.getStorageSync('token')
                 }
                 wx.showLoading({
-                    title: '加载中', 
+                    title: 'Loading ...', 
                 })
                 return request
             },

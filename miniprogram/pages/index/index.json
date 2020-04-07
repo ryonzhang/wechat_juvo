@@ -1,4 +1,4 @@
 {
     "navigationBarTitleText": "Juvo Mobile",
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": false
 }

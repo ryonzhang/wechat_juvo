@@ -2,24 +2,12 @@
   "pages": [
     "pages/index/index",
     "pages/successful/index",
-    "pages/classify/index",
     "pages/cart/index", 
-    "pages/address/list/index",
-    "pages/address/add/index",
-    "pages/address/edit/index",
-    "pages/address/confirm/index",
     "pages/order/list/index",
-    "pages/order/confirm/index",
-    "pages/order/detail/index",
-    "pages/goods/list/index",
-    "pages/goods/detail/index",
     "pages/help/list/index",
     "pages/help/detail/index",
-    "pages/search/index",
     "pages/about/index",
-    "pages/login/index",
-    "pages/user/index",
-    "pages/balance/index"
+    "pages/user/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#eee",
@@ -36,20 +24,20 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "res/images/icon-disabled-home.png",
-        "selectedIconPath": "res/images/icon-primary-home.png",
+        "iconPath": "assets/images/icon-disabled-home.png",
+        "selectedIconPath": "assets/images/icon-primary-home.png",
         "text": "Home"
       },
       {
         "pagePath": "pages/cart/index",
-        "iconPath": "res/images/icon-disabled-top-up.png",
-        "selectedIconPath": "res/images/icon-primary-top-up.png",
+        "iconPath": "assets/images/icon-disabled-top-up.png",
+        "selectedIconPath": "assets/images/icon-primary-top-up.png",
         "text": "Top Up"
       },
       {
         "pagePath": "pages/user/index",
-        "iconPath": "res/images/icon-disabled-sms.png",
-        "selectedIconPath": "res/images/icon-primary-sms.png",
+        "iconPath": "assets/images/icon-disabled-sms.png",
+        "selectedIconPath": "assets/images/icon-primary-sms.png",
         "text": "My Info"
       }
     ]

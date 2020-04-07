@@ -1,5 +1,5 @@
 /**
- * 注册拦截器
+ * register interceptor
  */
 class InterceptorManager {
     constructor() {
@@ -11,7 +11,7 @@ class InterceptorManager {
     }
 
     /**
-     * 添加一个拦截器
+     * add an interceptor
      */
     use(obj) {
         this.handlers.push({
@@ -24,7 +24,7 @@ class InterceptorManager {
     }
 
     /**
-     * 移除一个拦截器
+     * remove an interceptor
      */
     eject(id) {
         if (this.handlers[id]) {
@@ -33,7 +33,7 @@ class InterceptorManager {
     }
 
     /**
-     * 遍历所有已注册的拦截器
+     * traverse all interceptors
      */
     forEach(fn) {
         this.handlers.forEach(h => {

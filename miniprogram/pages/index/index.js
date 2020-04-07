@@ -1,16 +1,39 @@
-const App = getApp()
-
 Page({
   data: {
     mainBalance: 18.16,
-    totalDue: 0.0
+    totalDue: 0.00,
+    level:'GOLD',
+    currentPoints:700,
+    pointsToNextLevel:40,
+    nextLevel:'Diamond',
+    dataBalance:'1GB',
+    dataExpiredDays:2,
+    dataTimeRemainedInMins:86,
+    inNetworkCallExpiredDays:5,
+    inNetworkTimeRemainedInMins:51,
+    globalCallExpiredDays:28,
+    globalCallTimeRemainedInMins:32,
+    smsExpiredDays: 56,
+    smsTimeRemainedInMins: 12,
   },
-  onShow(){
+  onShow() {
+    // set main balance to the current value unless stored in local
     var mainBalance = wx.getStorageSync('mainBalance')
-    if (mainBalance){
-      this.setData({mainBalance})
-    }else{
+    if (mainBalance) {
+      this.setData({
+        mainBalance:parseFloat(mainBalance)
+      })
+    } else {
       wx.setStorageSync('mainBalance', this.data.mainBalance)
+    }
+    // set total due to the current value unless stored in local
+    var totalDue = wx.getStorageSync('totalDue')
+    if (totalDue) {
+      this.setData({
+        totalDue: parseFloat(totalDue)
+      })
+    } else {
+      wx.setStorageSync('totalDue', this.data.totalDue)
     }
   },
   onLoad() {

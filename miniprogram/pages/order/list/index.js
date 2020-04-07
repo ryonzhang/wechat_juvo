@@ -1,5 +1,3 @@
-const App = getApp()
-
 Page({
     data: {
       orders:[{

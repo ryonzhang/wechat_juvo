@@ -1,65 +1,64 @@
-<import src="../common/nav.wxml" />
-<import src="../common/list.wxml" />
+<wxs module="utils" src="../../pipelines/utils.wxs"></wxs>
 <view class='main'>
-  <image class='topup' src="../../res/images/i-os.svg" />
-  <view class='info_bar'>
-    <view class='main_balance' catchtap="topup">
-      <text class='main_balance_text'>Main Balance</text>
-      <view class='main_balance_number'>
+  <image class='topup' src="../../assets/images/i-os.svg" />
+  <view class='info-bar'>
+    <view class='main-balance' catchtap="topup">
+      <text class='main-balance-text'>Main Balance</text>
+      <view class='main-balance-number'>
         <text class='dollar'>$</text>
-        <text>{{mainBalance}}</text>
+        <text>{{utils.numberToFix(mainBalance)}}</text>
       </view>
     </view>
-    <view class='total_due'>
-      <text class='total_due_text'>Total Due</text>
+    <view class='total-due'>
+      <text class='total-due-text'>Total Due</text>
       <view>
         <text class='dollar'>$</text>
-        <text class='total_due_number'>{{totalDue}}</text>
+        <text class='total-due-number'>{{utils.numberToFix(totalDue)}}</text>
       </view>
     </view>
   </view>
   <view class='loyalty-wrapper'>
     <view class='loyalty'>
-      <image class='progress-bar' src="../../res/images/progress-bar.svg" />
-      <image class='oval' animation="{{level_ease}}" src="../../res/images/oval-2.svg" />
-      <image class='level-gold' animation="{{level_ease}}" src="../../res/images/level-gold.svg" />
-      <text class='level-text' animation="{{level_ease}}">GOLD</text>
-      <text class='loyalty-points' animation="{{level_ease}}">700</text>
-      <text class='next-level-points' animation="{{level_ease}}">40 more to Diamond</text>
-      <image class='level-diamond' animation="{{level_ease}}" src="../../res/images/level-diamond.svg" />
+      <image class='progress-bar' src="../../assets/images/progress-bar.svg" />
+      <image class='oval' animation="{{level_ease}}" src="../../assets/images/oval-2.svg" />
+      <image class='level-gold' animation="{{level_ease}}" src="../../assets/images/level-gold.svg" />
+      <text class='level-text' animation="{{level_ease}}">{{level}}</text>
+      <text class='loyalty-points' animation="{{level_ease}}">{{currentPoints}}</text>
+      <text class='next-level-points' animation="{{level_ease}}">{{pointsToNextLevel}} more to {{nextLevel}}</text>
+      <image class='level-diamond' animation="{{level_ease}}" src="../../assets/images/level-diamond.svg" />
     </view>
   </view>
   <view class='package'>
-    <image class='data' src="../../res/images/data.svg" />
+    <image class='data' src="../../assets/images/data.svg" />
     <view class='list-item'>
       <view class='item-main'>
-        <text class='item-main-data'>Data 1GB</text>
-        <text class='item-main-sub'>Expires in 2 days</text>
+        <text class='item-main-data'>Data {{dataBalance}}</text>
+        <text class='item-main-sub'>Expires in {{dataExpiredDays}} days</text>
       </view>
-      <text class='item-time-text'>86 mins</text>
+      <text class='item-time-text'>{{dataTimeRemainedInMins}} mins</text>
     </view>
-    <image class='voice' src="../../res/images/voice.svg" />
+    <image class='voice' src="../../assets/images/voice.svg" />
     <view class='list-item'>
       <view class='item-main'>
         <text class='item-main-data'>In-network calls</text>
-        <text class='item-main-sub'>Expires in 5 days</text>
+        <text class='item-main-sub'>Expires in {{inNetworkCallExpiredDays}} days</text>
       </view>
-      <text class='item-time-text'>86 mins</text>
+      <text class='item-time-text'>{{inNetworkTimeRemainedInMins}} mins</text>
     </view>
   </view>
   <view class='list-item'>
     <view class='item-main'>
       <text class='item-main-data'>Global calls</text>
-      <text class='item-main-sub'>Expires in 2 days</text>
+      <text class='item-main-sub'>Expires in {{globalCallExpiredDays}} days</text>
     </view>
-    <text class='item-time-text'>15 mins</text>
+    <text class='item-time-text'>{{globalCallTimeRemainedInMins}} mins</text>
   </view>
 </view>
-<image class='sms' src="../../res/images/sms.svg" />
+<image class='sms' src="../../assets/images/sms.svg" />
 <view class='list-item'>
   <view class='item-main'>
-    <text class='item-main-data'>Data 1GB</text>
-    <text class='item-main-sub'>Expires in 2 days</text>
+    <text class='item-main-data'>SMS</text>
+    <text class='item-main-sub'>Expires in {{smsExpiredDays}} days</text>
   </view>
-  <text class='item-time-text'>86 mins</text>
+  <text class='item-time-text'>{{smsTimeRemainedInMins}} mins</text>
 </view>

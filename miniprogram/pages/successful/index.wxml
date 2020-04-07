@@ -1,12 +1,12 @@
 <view class='background'>
 <text class='top-up-completed'>top-up
 completed</text>
-<image class='top-up-completed-image' src="../../res/images/top-up-completed.svg" />
+<image class='top-up-completed-image' src="../../assets/images/top-up-completed.svg" />
 <text class='product-title'>Product</text>
 <text class='product-sub'>${{amount}} top-up</text>
 <text class='detail-title'>Details</text>
 <text class='detail-sub'>Pay back at least ${{amount}}.00 before 
 {{expiration}} at an OpCo location to earn {{amount*10}} points</text>
-<image bindtap="confirm" class='confirm-btn' src="../../res/images/confirm-btn.svg" />
+<image bindtap="confirm" class='confirm-btn' src="../../assets/images/confirm-btn.svg" />
 
 </view>
